@@ -7,7 +7,24 @@
 </head>
 <body>
     {% include "navbar.html" %}
-    <h2>Home Page</h2>
+
+    <h2>CRUD: Read a Task</h2>
+
+
+    {% for task in tasks %}
+
+
+    {{task.id}}
+    <br>
+    {{task.title}}
+    <br>
+    {{task.content}}
+    <br><br>
+
+
+
+    {% endfor %}
+
 
 
 
