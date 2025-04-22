@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include "navbar.html" %}
+
+    <h2>CRUD: Delete a Task</h2>
+
+  
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+
+        <p>Are you sure want to delete " {{object}} "? </p>
+        <a href="{% url 'viewTasks' %}">go back</a>
+        <br><br>
+        <input type="submit" value="Submit"/>
+        
+
+    </form>
+
+
+
+
+
+</body>
+</html>

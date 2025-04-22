@@ -7,13 +7,18 @@
 </head>
 <body>
     {% include "navbar.html" %}
-    <h2>Home Page</h2>
+    <h2>CRUD - Update a task</h2>
+
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <input type="submit" value="Submit"/>
+        
+
+    </form>
     
-
-    <a href="{% url 'createTask' %}">Create a task</a>
-    <br>
-    <a href="{% url 'viewTasks' %}">View tasks</a>
-
 
 
 </body>

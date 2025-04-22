@@ -19,8 +19,13 @@
     {{task.title}}
     <br>
     {{task.content}}
-    <br><br>
+    <br>
 
+    <a href="{% url 'updateTask' task.id %}">Update Task</a>
+    <br>
+
+    <a href="{% url 'deleteTask' task.id %}">Delete Task</a>
+    <br><br>
 
 
     {% endfor %}
